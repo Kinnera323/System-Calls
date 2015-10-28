@@ -1,0 +1,20 @@
+
+Expected the input directory name to be accompanied by these 3 option(­l,­a,­h) in any combination in which case output should reflect the 
+effect of these options. 
+
+Eg. Test cases
+ 
+$ ./myls dirname 
+dircontent
+ 
+$ ./myls dirname -lh
+dircontent with effects of these options
+ 
+$./myls -lah  dirname
+
+Notes:
+1. dirname can be absolute or relative path, it can also be a filename, in which case you output that
+file only.
+2. A symlink is displayed to the file it points to like in the case of ls -l. 
+3. Options are given together (like -lah) and not separately (like -a -l) to make parsing easier.
+4. Options can be present before or after the dirname
